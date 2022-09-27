@@ -3,13 +3,13 @@
 #include<string.h>
 
 int opcao = 0;
-
+// teste commit
 
 void TelaLogin(){
 
     char login[15] = "t"; //vincular banco aqui para buscar valores 
     char login1[15]; // Entrada do usuario
-    char senha[15] = "t"; //vincular banco aqui para buscar valores //isso é um teste
+    char senha[15] = "t"; //vincular banco aqui para buscar valores //
     char senha1[15]; // Entrada do usuario       
     int login_efetuado = 0; //0 - Falso e  1 - Verdadeiro
     
