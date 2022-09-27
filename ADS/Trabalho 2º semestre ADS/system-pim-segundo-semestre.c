@@ -86,16 +86,16 @@ void MostraMenu(){
 		int  funcionarioId;
 		char cont = 's';
 		
-		printf("\n\nAdicione os dados do Funcionario\n\n");
+		printf("\n\nAdicione os dados do Colaborador\n\n");
 		
 		while(cont=='s'){			
-			printf("Digite o nome do funcionario: \n");
+			printf("Digite o nome do colaborador: \n");
 			scanf("%c",&nomeFunc);
 			
 			printf("Digite o código do colaborador: ");
 			scanf("%d",&funcionarioId);
 			
-			printf("Deseja cadastrar outros clientes S/N: ");		
+			printf("Deseja cadastrar outros colaborador S/N: ");		
 			scanf("%s",&cont);
 			system("cls");
 		}
