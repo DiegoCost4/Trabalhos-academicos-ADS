@@ -2,7 +2,7 @@
 #include <stdlib.h>
 int main ()
 {
-	int aa,an,id;
+	 /*aa,an,id;
 	char cont;
 		
 		cont='s';
@@ -22,6 +22,31 @@ int main ()
 				
 				printf("Deseja calcular novamente S / N: ");
 					scanf("%c",&cont);
-		}
+		}*/
+		char nome[40];
+		char sobrenome[40];
+		char cpf[8];
+		char cont='s';
+		
+		
+		printf("\n\nAdicione os dados do Cliente\n");
+		
+		while(cont=='s'){	
+		
+		
+		printf("Digite o nome do cliente: ");
+			scanf("%s",&nome);
+		
+		printf("Digite o sobrenome do cliente: ");
+			scanf("%s",&sobrenome);
+		
+		printf("Digite o CPF: ");
+			scanf("%s",&cpf);
+		
+		
+		
+		printf("Deseja cadastrar outro cliente S/N: ");		
+			scanf("%s",&cont);
+	}
 		return 0;
 }

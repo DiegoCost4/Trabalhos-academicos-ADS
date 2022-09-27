@@ -7,10 +7,10 @@ int opcao = 0;
 
 void TelaLogin(){
 
-    char login[15] = "teste";
-    char login1[15];
-    char senha[15] = "teste";
-    char senha1[15];        
+    char login[15] = "t"; //vincular banco aqui para buscar valores 
+    char login1[15]; // Entrada do usuario
+    char senha[15] = "t"; //vincular banco aqui para buscar valores 
+    char senha1[15]; // Entrada do usuario       
     int login_efetuado = 0; //0 - Falso e  1 - Verdadeiro
     
 
@@ -22,13 +22,13 @@ void TelaLogin(){
         scanf("%s", senha1);
         
 
-        if (strcmp(login, login1) == 0 && strcmp(senha, senha1) == 0){
+        if (strcmp(login, login1) == 0 && strcmp(senha, senha1) == 0){ //compara entrada do usuario com valor salvo em banco
             printf("\n\nLOGADO!\n\n");
             login_efetuado = 1;
             system("cls");
         }
         else
-            printf("\n\nDADOS INVALIDOS!\n\n");    
+            printf("\n\nDADOS INVALIDOS!\n\n");    //retorno de uma entrada que não esteja cadastrada no banco
     }
 
 }
@@ -43,65 +43,90 @@ void MostraMenu(){
 	printf("2) - CADASTRO DE FUNCIONARIOS\n");
 	printf("3) - SAIR DO SISTEMA\n\n");
 	printf("DIGITE A OPÇÃO DESEJADA: ");
-	scanf("%d", &opcao);
+	scanf("%d",&opcao);
+	system("cls");
+
+	
 	
 	getchar();
 	
+	
 }
 	void CadastroClientes() {		
+		
 		char nome[40];
 		char sobrenome[40];
-		char cpf[8];
-		
-		printf("\n\nAdicione os dados do Cliente\n");
-		
-		printf("Digite o nome do cliente: ");
-		scanf("%s",&nome);
-		
-		printf("Digite o sobrenome do cliente: ");
-		scanf("%s",&sobrenome);
-		
-		printf("Digite o CPF: ");
-		scanf("%s",&cpf);
+		int  cpf;
+		int cont = 's';
+			printf("\n\nAdicione os dados do Cliente\n\n");	
+		while(cont=='s'){	
+			printf("Digite o nome do cliente: ");
+			scanf("%s",&nome);
+			
+			printf("Digite o sobrenome do cliente: ");
+			scanf("%s",&sobrenome);
 
+			printf("Digite o CPF: ");
+			scanf("%d",&cpf);
+	
+			printf("Deseja cadastrar outros clientes S/N: ");		
+			scanf("%s",&cont);
+			system("cls");
+		}
+			printf("1) - CADASTRO DE CLIENTE\n");
+			printf("2) - CADASTRO DE FUNCIONARIOS\n");
+			printf("3) - SAIR DO SISTEMA\n\n");
+			printf("DIGITE A OPÇÃO DESEJADA: ");
+			scanf("%d",&opcao);
 	}
+	
 	void CadastroFuncionarios(){
-		printf("\n\nAdicione os dados do Funcionario\n");
+		
+		char nomeFunc[40];
+		int  funcionarioId;
+		char cont = 's';
+		
+		printf("\n\nAdicione os dados do Funcionario\n\n");
+		
+		while(cont=='s'){			
+			printf("Digite o nome do funcionario: \n");
+			scanf("%c",&nomeFunc);
+			
+			printf("Digite o código do colaborador: ");
+			scanf("%d",&funcionarioId);
+			
+			printf("Deseja cadastrar outros clientes S/N: ");		
+			scanf("%s",&cont);
+			system("cls");
+		}
+			printf("1) - CADASTRO DE CLIENTE\n");
+			printf("2) - CADASTRO DE FUNCIONARIOS\n");
+			printf("3) - SAIR DO SISTEMA\n\n");
+			printf("DIGITE A OPÇÃO DESEJADA: ");
+			scanf("%d", &opcao);
 	}
 	
 	int main() {
-		setlocale(LC_ALL, "");
-		
+		setlocale(LC_ALL, "");		
 		TelaLogin();
-		
 		MostraMenu();
+		CadastroClientes();
+		CadastroFuncionarios();
 		
 		switch (opcao)
-		
 		{
-			case 1 : // Gravar Clientes
-				
+			case 1 : // Gravar Clientes		
 				CadastroClientes();
-			
-			break;
-			
-			case 2 : // Gravar Funcionarios
-			
+				break;
+			case 2: // Gravar Funcionarios
 				CadastroFuncionarios();
-			
-			break;
-			
-			case 3: 
-				
+				break;
+			case 3: // Sair do sistema
 				system("exit");
-				
-			break;
-			
+				break;
 			default :
-				
 				printf("Opção invalida!");
-			
-			break;
+				break;
 		}
 		getchar();
 		
