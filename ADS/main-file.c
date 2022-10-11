@@ -1,14 +1,13 @@
 #include <stdio.h>
-//#include "login-screen.c"
-//#include "file-database.c"
+#include <locale.h>
+
 #include "home-menu.c"
-#include "client-registration.c"
 #include "option-menu.c"
 int main() {
 	
+	setlocale(LC_ALL, "Portuguese");
 	MenuPrincipal(); // Cadastro/Login
-	//MenuOpcoes(); // 
-	//CadastrosClient(); // Cadastra Clientes
+	//MenuOpcoes(); //
 
 		
 

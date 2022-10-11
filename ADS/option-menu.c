@@ -1,4 +1,8 @@
 #include <stdio.h>
+#include "client-registration.c"
+#include "collaborator-registration.c"
+#include "cadastrarPerfil.c"
+
 void MenuOpcoes(){
 	int opcao = 0;
 	
@@ -11,13 +15,13 @@ void MenuOpcoes(){
 	switch (opcao) 
 	{
 		case 1 :
-			//tela de cadastro de cliente();
+			CadastrosClient();
 			break;
 		case 2 :
-			//tela de cadastro de Colaborador();
+			CadastroColaborador();
 			break;
 		case 3 :
-			//tela de cadastro de perfil();
+			cadastrarPerfil();
 			break;
 		case 4 :
 			system("exit");
