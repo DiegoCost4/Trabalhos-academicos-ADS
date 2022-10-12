@@ -1,4 +1,4 @@
-void TirarEspaco(char texto[])
+void RetirarEspaco(char texto[])
 {
 	int i;
     for (i=0;i<strlen(texto);i++)
@@ -10,7 +10,7 @@ void TirarEspaco(char texto[])
 	}
 }
 
-void ColocarEspaco(char texto[])
+void AtribuirEspaco(char texto[])
 {
 	int i;
 	for (i=0;i<strlen(texto);i++)

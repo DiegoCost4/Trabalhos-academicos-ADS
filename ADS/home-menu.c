@@ -19,13 +19,15 @@ void MenuPrincipal(){
 	switch (opcao) 
 	{
 		case 1 : 
-			CadastroUser();
+			system("cls");
+			CadastroUser(); // Cadastrar Usuario
 			break;
 		case 2 :
-			TelaLogin();
+			system("cls");
+			TelaLogin(); // Tela de login
 			break;
 		case 3  :
-			system("exit");
+			system("exit");  // Validar Funcão (wrr: Não está funcionando)
 			break;
 		default :
 			printf("Opção invalida!");
