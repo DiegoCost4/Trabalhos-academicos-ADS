@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "client-registration.c"
 #include "product-registration.c"
+#include "product-list.c"
 //Incluir as demais telas confome for desenvolvendo
 
 void MenuOpcoes(){
@@ -39,7 +40,7 @@ void MenuOpcoes(){
 			break;
 		case 4 :
 			system("cls");
-			//lsProduct(); //Lista Produtos
+			lsProduct(); //Lista Produtos
 			break;
 		case 5 :
 			system("cls");
