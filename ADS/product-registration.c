@@ -10,6 +10,7 @@ void CdProdut(){
 	char category[50];
 	int qntd;
 	float costPrice,salePrice;
+	
 	printf("****************************************\n");
 	printf("**********Cadastro de Produtos**********\n");
 	printf("****************************************\n\n");
@@ -43,7 +44,7 @@ void CdProdut(){
 	FILE *arqDataBaseProducts;
 	arqDataBaseProducts = fopen("DataBaseProducts.txt", "a+");
 	
-	fprintf(arqDataBaseProducts,"%s %s %i R$%f R$%f %s\n",nameProduct,brand,qntd,costPrice,salePrice,category);
+	fprintf(arqDataBaseProducts,"%s %s %i R$%.2f R$%.2f %s\n",nameProduct,brand,qntd,costPrice,salePrice,category);
 	
 	fclose(arqDataBaseProducts);
 }

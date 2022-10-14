@@ -3,9 +3,6 @@
 #include <string.h>
 #include "getsenha.c"
 #define TAMANHO 10
-#include<stdio.h>
-#include<locale.h>
-#include<string.h>
 
 int opcao = 0;
 

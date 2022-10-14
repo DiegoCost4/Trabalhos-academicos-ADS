@@ -13,12 +13,12 @@ void MenuOpcoes(){
 	printf("**************************************\n");
 	printf("************Menu de Opções************\n");
 	printf("**************************************\n\n");	
-	printf("1 - Cadastrar Cliente\n");
-	printf("2 - Cadastrar Produto\n");
-	printf("3 - Listar Cliente\n");
-	printf("4 - Listar Produtos\n");
-	printf("5 - Vender\n");
-	printf("6 - Comprar\n");
+	printf("1 - Cadastrar Cliente\n"); // Carlos 
+	printf("2 - Cadastrar Produto\n"); // Guilherme
+	printf("3 - Listar Cliente\n"); // Vamos fazer juntos
+	printf("4 - Listar Produtos\n"); // Kaique
+	printf("5 - Vender\n"); 
+	//printf("6 - Comprar\n"); 
 	printf("7 - Sair\n");
 	printf("Digite a opção desejada: ");
 	scanf("%d", &opcao);
@@ -46,9 +46,9 @@ void MenuOpcoes(){
 			system("cls");
 			//sellProduct(); //Vender Produtos
 			break;
-		case 6 :
+	/*	case 6 :
 			system("cls");
-			//purchasePrduct(); // Comprar Produto
+			//purchasePrduct(); // Comprar Produto*/
 		case 7 :
 			system("exit");
 			break;
