@@ -14,7 +14,7 @@ void CadastrosClient(){
 	char email[30];
 	float cpf;
 	
-	//char adress[50];//Não feito ainda
+	//char adress[50];//Nï¿½o feito ainda
 	printf("****************************************\n");
 	printf("***********Cadastro de Clientes*********\n");
 	printf("****************************************\n\n");
@@ -22,6 +22,7 @@ void CadastrosClient(){
 	printf("\nDigite os dados do cliente!\n\n");
 	
 	printf("Nome: ");			
+<<<<<<< HEAD
 	scanf("%s",nameClient);	// Nome do Cliente, Ver como obter nome completo usando espaço (função espacoFunction.c)
 	
 	printf("Sobrenome: ");
@@ -35,12 +36,27 @@ void CadastrosClient(){
 	
 	printf("Digite o CPF: ");
 	scanf("%f",&cpf); // Cpf ( Fazer função de validação)
+=======
+	scanf("%s", nameClient);	// Nome do Cliente, Ver como obter nome completo usando espaï¿½o (funï¿½ï¿½o espacoFunction.c)
+	
+	printf("Sobrenome: ");
+	scanf("%s", lastName);   // Sobrenome (provisorio enqunato nï¿½o sabemos como obter o nome completo na funï¿½ï¿½o anterior
+		
+	printf("Telefone: ");
+	scanf("%s", NumberClient); // Numero do cliente
+	
+	printf("Digite o seu e-mail: "); // E-mail do Cliente
+	scanf("%s", email);
+	
+	printf("Digite o CPF: ");
+	scanf("%f",&cpf); // Cpf ( Fazer funï¿½ï¿½o de validaï¿½ï¿½o)
+>>>>>>> 66ff87f8cc6d0d092f6d8924f311ac737f976cb5
 	
 	printf("Cadastro efetuado!\n\n");
 	
-	printf("Selecione a opção que deseja: \n");
+	printf("Selecione a opï¿½ï¿½o que deseja: \n");
 	printf("1 - Cadastrar novo cliente\n");
-	printf("2 - Retornar ao Menu de opções\n");
+	printf("2 - Retornar ao Menu de opï¿½ï¿½es\n");
 	printf("3 - Sair\n");	
 	
 	
@@ -58,10 +74,16 @@ void CadastrosClient(){
 			MenuOpcoes(); // Funcionando
 			break;
 		case 3:
+<<<<<<< HEAD
 			printf("Obrigado por usar essa merda!");
 			exit(0);// Validado
 		default :
 			printf("\nOpção Invalida!!\n\n");
+=======
+			system("exit");// Validar Funï¿½ï¿½o
+		default :
+			printf("\nOpï¿½ï¿½o Invalida!!");
+>>>>>>> 66ff87f8cc6d0d092f6d8924f311ac737f976cb5
 			break;
 		}
 		
@@ -72,7 +94,11 @@ void CadastrosClient(){
 	FILE *arqClientDatabase;
 	arqClientDatabase = fopen("clientesDatabse.txt","a+");
 	
+<<<<<<< HEAD
 	fprintf(arqClientDatabase,"%s %s %s %s %f\n", nameClient,lastName,NumberClient,email,cpf);
+=======
+	fprintf(arqClientDatabase,"%s %s %s %s %f\n", nameClient, lastName, NumberClient, email, cpf);
+>>>>>>> 66ff87f8cc6d0d092f6d8924f311ac737f976cb5
 	//fprintf(arqClientDatabase,"%d \n", NumberClient);
 	
 	fclose(arqClientDatabase);
