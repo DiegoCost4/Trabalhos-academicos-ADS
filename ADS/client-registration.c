@@ -1,17 +1,18 @@
 #include <stdio.h>
+#include <stdlib.h>
 //#include "espacoFunction.c"
 
 void CadastrosClient(){
 	
-	Pessoa pessoa[100];
+	//Pessoa pessoa[100];
 	//struct	Pessoa Cliente;
 	int opcao = 0;
 	
-	/*char nameClient[50];
+	char nameClient[50];
 	char lastName[50];
 	char NumberClient[11];
 	char email[30];
-	float cpf;*/
+	float cpf;
 	
 	//char adress[50];//Não feito ainda
 	printf("****************************************\n");
@@ -21,19 +22,19 @@ void CadastrosClient(){
 	printf("\nDigite os dados do cliente!\n\n");
 	
 	printf("Nome: ");			
-	scanf("%s", pessoa.nameClient);	// Nome do Cliente, Ver como obter nome completo usando espaço (função espacoFunction.c)
+	scanf("%s",nameClient);	// Nome do Cliente, Ver como obter nome completo usando espaço (função espacoFunction.c)
 	
 	printf("Sobrenome: ");
-	scanf("%s",pessoa.lastName);   // Sobrenome (provisorio enqunato não sabemos como obter o nome completo na função anterior
+	scanf("%s",lastName);   // Sobrenome (provisorio enqunato não sabemos como obter o nome completo na função anterior
 		
 	printf("Telefone: ");
-	scanf("%s", pessoa.NumberClient); // Numero do cliente
+	scanf("%s",NumberClient); // Numero do cliente
 	
 	printf("Digite o seu e-mail: "); // E-mail do Cliente
-	scanf("%s", pessoa.email);
+	scanf("%s",email);
 	
 	printf("Digite o CPF: ");
-	scanf("%f",&pessoa.cpf); // Cpf ( Fazer função de validação)
+	scanf("%f",&cpf); // Cpf ( Fazer função de validação)
 	
 	printf("Cadastro efetuado!\n\n");
 	
@@ -41,9 +42,13 @@ void CadastrosClient(){
 	printf("1 - Cadastrar novo cliente\n");
 	printf("2 - Retornar ao Menu de opções\n");
 	printf("3 - Sair\n");	
-	scanf("%i",&opcao);
-
-	switch(opcao){
+	
+	
+	while(opcao!=1 || opcao!=2 || opcao!=3){
+		scanf("%i",&opcao);
+		
+		
+		switch(opcao){
 		case 1:
 			system("cls");
 			CadastrosClient(); // Funcionando
@@ -53,17 +58,21 @@ void CadastrosClient(){
 			MenuOpcoes(); // Funcionando
 			break;
 		case 3:
-			system("exit");// Validar Função
+			printf("Obrigado por usar essa merda!");
+			exit(0);// Validado
 		default :
-			printf("\nOpção Invalida!!");
+			printf("\nOpção Invalida!!\n\n");
 			break;
+		}
+		
 	}
+	
 	
 	//Banco de dados
 	FILE *arqClientDatabase;
 	arqClientDatabase = fopen("clientesDatabse.txt","a+");
 	
-	fprintf(arqClientDatabase,"%s %s %s %s %f\n", Cliente.nameClient,Cliente.lastName,Cliente.NumberClient,Cliente.email,Cliente.cpf);
+	fprintf(arqClientDatabase,"%s %s %s %s %f\n", nameClient,lastName,NumberClient,email,cpf);
 	//fprintf(arqClientDatabase,"%d \n", NumberClient);
 	
 	fclose(arqClientDatabase);

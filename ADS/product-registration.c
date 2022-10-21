@@ -5,10 +5,10 @@
 
 void CdProdut(){	
 	
-	char nameProduct[100];
-	char brand[15];
-	char category[50];
-	int qntd;
+	char  nameProduct[100];
+	char  brand[15];
+	char  category[50];
+	int	  qntd;
 	float costPrice,salePrice;
 	
 	printf("****************************************\n");
