@@ -5,10 +5,10 @@
 
 void CdProdut(){	
 	
-	char  nameProduct[100];
-	char  brand[15];
-	char  category[50];
-	int	  qntd;
+	char nameProduct[100];
+	char brand[15];
+	char category[50];
+	int qntd;
 	float costPrice,salePrice;
 	
 	printf("****************************************\n");
@@ -26,16 +26,16 @@ void CdProdut(){
 	printf("Quantidade: ");
 	scanf("%i",&qntd);
 	
-	printf("Preï¿½o de custo: ");
+	printf("Preço de custo: ");
 	scanf("%f",&costPrice);
 	
-	printf("Preï¿½o de venda: ");
+	printf("Preço de venda: ");
 	scanf("%f",&salePrice);
 	
 	printf("Categoria: ");
 	scanf("%s",category);
 	
-	//Fazer Retorno para Menu de Opï¿½ï¿½es ou novo cadastro
+	//Fazer Retorno para Menu de Opções ou novo cadastro
 	
 	//AtribuirEspaco(nameProduct);
 	
@@ -47,13 +47,4 @@ void CdProdut(){
 	fprintf(arqDataBaseProducts,"%s %s %i R$%.2f R$%.2f %s\n",nameProduct,brand,qntd,costPrice,salePrice,category);
 	
 	fclose(arqDataBaseProducts);
-
-
-	FILE *storage;
-	storage = fopen("Storage.txt", "a+");
-	
-	fprintf(storage, "%s   %i\n", nameProduct, qntd);
-	
-	fclose(storage);
-
 }

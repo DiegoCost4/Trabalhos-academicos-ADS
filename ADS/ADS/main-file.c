@@ -7,28 +7,27 @@
 /// @brief 0
 /// @return 
 
-/*typedef struct {
+typedef struct {
 		
 	char nameClient[50];
 	char lastName[50];
 	char NumberClient[11];
 	char email[30];
 	float cpf[11];
-
-	};
-
-=======
-	}Pessoa;*/
+	}Pessoa;
 
 
 
 
 int main() {
+	//definition();
 	setlocale(LC_ALL, "Portuguese");
 	MenuPrincipal(); // Cadastro/Login
-	MenuOpcoes(); // OpÃ§Ãµes Para NevegaÃ§Ã£o
+	MenuOpcoes(); // Opções Para Nevegação
 
 		
+
+	//
 	printf("DEEEEU CEERTOOOOOOO");
 	return 0;
 }

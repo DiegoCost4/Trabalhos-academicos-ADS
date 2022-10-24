@@ -3,8 +3,6 @@
 #include "client-registration.c"
 #include "product-registration.c"
 #include "product-list.c"
-#include "Storage-Screen.c"
-
 //Incluir as demais telas confome for desenvolvendo
 
 void MenuOpcoes(){
@@ -13,16 +11,16 @@ void MenuOpcoes(){
 	int opcao = 0;
 	
 	printf("**************************************\n");
-	printf("************Menu de Opï¿½ï¿½es************\n");
+	printf("************Menu de Opções************\n");
 	printf("**************************************\n\n");	
 	printf("1 - Cadastrar Cliente\n"); // Carlos 
 	printf("2 - Cadastrar Produto\n"); // Guilherme
 	printf("3 - Listar Cliente\n"); // Vamos fazer juntos
 	printf("4 - Listar Produtos\n"); // Kaique
 	printf("5 - Vender\n"); 
-	printf("6 - Estoque\n"); 
+	//printf("6 - Comprar\n"); 
 	printf("7 - Sair\n");
-	printf("Digite a opï¿½ï¿½o desejada: ");
+	printf("Digite a opção desejada: ");
 	scanf("%d", &opcao);
 	
 	
@@ -48,10 +46,9 @@ void MenuOpcoes(){
 			system("cls");
 			//sellProduct(); //Vender Produtos
 			break;
-		case 6 :
+	/*	case 6 :
 			system("cls");
-			StorageScreen(); // Estoque Produto
-			break;
+			//purchasePrduct(); // Comprar Produto*/
 		case 7 :
 			system("exit");
 			break;
