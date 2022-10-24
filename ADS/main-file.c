@@ -14,20 +14,19 @@
 	char NumberClient[11];
 	char email[30];
 	float cpf[11];
-<<<<<<< HEAD
+
 	};
-*/
+
 =======
 	}Pessoa;*/
 
->>>>>>> 66ff87f8cc6d0d092f6d8924f311ac737f976cb5
 
 
 
 int main() {
 	setlocale(LC_ALL, "Portuguese");
 	MenuPrincipal(); // Cadastro/Login
-	MenuOpcoes(); // Op��es Para Nevega��o
+	MenuOpcoes(); // Opções Para Nevegação
 
 		
 	printf("DEEEEU CEERTOOOOOOO");
