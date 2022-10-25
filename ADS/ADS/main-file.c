@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <locale.h>
+//#include <iostream>
+//using namespace std;
 #include "home-menu.c"
 #include "option-menu.c"
 //#include "definition.c"
 
 /// @brief 0
 /// @return 
-
+/*
 typedef struct {
 		
 	char nameClient[50];
@@ -14,16 +16,18 @@ typedef struct {
 	char NumberClient[11];
 	char email[30];
 	float cpf[11];
-	}Pessoa;
+	}Pessoa;*/
 
 
 
 
 int main() {
 	//definition();
-	setlocale(LC_ALL, "Portuguese");
+	    setlocale( LC_ALL, "" );
+
+	
 	MenuPrincipal(); // Cadastro/Login
-	MenuOpcoes(); // Opções Para Nevegação
+	MenuOpcoes(); // OpÃ§Ãµes Para NevegaÃ§Ã£o
 
 		
 

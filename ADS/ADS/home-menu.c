@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "login-screen.c"
 #include "file-database.c"
 void MenuPrincipal(){
@@ -11,7 +12,7 @@ void MenuPrincipal(){
 	printf("2) - Conecte-se\n");
 	printf("3) - Sair\n\n");
 
-	printf("Digite a opção desejada: ");
+	printf("Digite a opÃ§Ã£o desejada: ");
 	scanf("%i",&opcao);
 	
 	while(opcao!=4){
@@ -27,10 +28,10 @@ void MenuPrincipal(){
 			TelaLogin(); // Tela de login
 			break;
 		case 3  :
-			system("exit");  // Validar Funcão (wrr: Não está funcionando)
+			system("exit");  // Validar Funcï¿½o (wrr: Nï¿½o estï¿½ funcionando)
 			break;
 		default :
-			printf("Opção invalida!");
+			printf("OpÃ§Ã£o invalida!");
 			break;	
 		}
 	}

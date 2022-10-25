@@ -8,3 +8,5 @@ Guilherme Jaime 1122334455 jaiminho@carrocel.com 544852377600,000000
 Carlos Alberto 11122334455 jgbnjiuyg@gmai.com 52652642304,000000
 Alexandre Souza 11996148312 alex-andre@gmail.com 25885237248,000000
 Carlos Alberto 1223456789 carlos@email.com 0,000000
+Alexandre TRouxa 321456 Otario@Alexandre.bobao 123642368,000000
+Alexandre Otario 123321 otario@n∆osabec.troxa 987456320,000000

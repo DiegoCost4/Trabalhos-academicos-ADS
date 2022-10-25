@@ -13,7 +13,7 @@ void adicionar(){
 	
 	printf("Digite a quantidade do produto: ");
 	
-	scanf("%i", %qntd);
+	scanf("%i", &qntd);
 	
 	
 	

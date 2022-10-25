@@ -26,16 +26,16 @@ void CdProdut(){
 	printf("Quantidade: ");
 	scanf("%i",&qntd);
 	
-	printf("Preço de custo: ");
+	printf("PreÃ§o de custo: ");
 	scanf("%f",&costPrice);
 	
-	printf("Preço de venda: ");
+	printf("PreÃ§o de venda: ");
 	scanf("%f",&salePrice);
 	
 	printf("Categoria: ");
 	scanf("%s",category);
 	
-	//Fazer Retorno para Menu de Opções ou novo cadastro
+	//Fazer Retorno para Menu de Opï¿½ï¿½es ou novo cadastro
 	
 	//AtribuirEspaco(nameProduct);
 	

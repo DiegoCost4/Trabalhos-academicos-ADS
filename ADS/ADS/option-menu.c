@@ -11,7 +11,7 @@ void MenuOpcoes(){
 	int opcao = 0;
 	
 	printf("**************************************\n");
-	printf("************Menu de Opções************\n");
+	printf("************Menu de OpÃ§Ãµes************\n");
 	printf("**************************************\n\n");	
 	printf("1 - Cadastrar Cliente\n"); // Carlos 
 	printf("2 - Cadastrar Produto\n"); // Guilherme
@@ -20,7 +20,7 @@ void MenuOpcoes(){
 	printf("5 - Vender\n"); 
 	//printf("6 - Comprar\n"); 
 	printf("7 - Sair\n");
-	printf("Digite a opção desejada: ");
+	printf("Digite a opÃ§Ã£o desejada: ");
 	scanf("%d", &opcao);
 	
 	
@@ -53,7 +53,7 @@ void MenuOpcoes(){
 			system("exit");
 			break;
 		default :
-			printf("\nOpcao invalida!\n");
+			printf("\nOpÃ§Ã£o invalida!\n");
 			break;
 	}
 	system("pause");
