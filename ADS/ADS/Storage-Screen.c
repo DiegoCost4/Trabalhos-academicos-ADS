@@ -6,6 +6,8 @@ void adicionar(){
 	
 	char nameProduct[20];
 	int qntd;
+	char resposta;
+
 	
 	printf("Digite o produto: ");
 	
@@ -17,17 +19,52 @@ void adicionar(){
 	
 	
 	
-	FILE *DataBaseProducts;
+	FILE *storage;
 	
-	DataBaseProducts = fopen("DataBaseProducts.txt", "a+");
+	storage = fopen("Storage.txt", "a+");
 	
-	fprintf(DataBaseProducts, "%s %i" , nameProduct, qntd);
+	fprintf(storage, "%s %i\n" , nameProduct, qntd);
 	
+	fclose(storage);
 	
+
+
+	/*printf("Deseja adicionar outro produto no estoque?(s/n) \n");
+
+	scanf("%s", resposta);
+
+	switch (resposta)
+	{
+		case 's':
+			StorageScreen();		 
+			break;
+
+		case 'n':
+			MenuOpcoes();
+			break;
+
+	default:
+		printf("OpÃ§Ã£o invÃ¡lida\n\n");
+		break;*/
 	
+
+
+	/*if(resposta == 's' ){
+		StorageScreen();
+	}
+	else if(resposta == 'n'){
+		MenuOpcoes();
+	}
+	else{
+
+		printf("Resposta invÃ¡lida, digite novamente...\n\n");
+
+		printf("Deseja adicionar outro produto no estoque?(s/n) \n");
+
+		scanf("%s", resposta);
+	}*/
+
 }
-
-
 
 
 void StorageScreen(){
@@ -36,16 +73,25 @@ void StorageScreen(){
 	
 	int opcao = 0;
 	
-	Printf("1- Adicionar");
-	Printf("2- Excluir");
-	Printf("3- Editar");
+	printf("1- Adicionar\n");
+	printf("2- Excluir\n");
+	printf("3- Editar\n");
 	
+	scanf("%i", &opcao);
+
+
 	switch(opcao){
 		
 		case 1:
 		 system("cls");
+		 adicionar();
+		 break;
+
 		 
 		 
+		default:
+			printf("\nOpcao invalida!\n");
+			break;
 		 
 	}
 	
