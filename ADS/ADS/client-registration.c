@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-//#include "espacoFunction.c"
-//Tentando arrumar a cagada do Alexandre
 
 void CadastrosClient(){
 	
@@ -40,8 +38,11 @@ void CadastrosClient(){
 	printf("Selecione a opção que deseja: \n");
 	printf("1 - Cadastrar novo cliente\n");
 	printf("2 - Retornar ao Menu de opções\n");
-	printf("3 - Sair\n");	
-	scanf("%i",&opcao);
+	printf("3 - Sair\n");
+
+	while (opcao!= 1 || opcao!= 2 || opcao!= 3){
+	 
+			scanf("%i",&opcao);
 
 	switch(opcao){
 		case 1:
@@ -53,10 +54,12 @@ void CadastrosClient(){
 			MenuOpcoes(); // Funcionando
 			break;
 		case 3:
+				printf("Obrigado por usar essa merda!");
 			exit(0);// Validar Fun��o
 		default :
 			printf("\nOpção Invalida!!");
 			break;
+		}
 	}
 	
 	//Banco de dados

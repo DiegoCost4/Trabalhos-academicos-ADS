@@ -1,11 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <locale.h>
-//#include <iostream>
-//using namespace std;
 #include "home-menu.c"
 #include "option-menu.c"
-//#include "definition.c"
-
 /// @brief 0
 /// @return 
 /*

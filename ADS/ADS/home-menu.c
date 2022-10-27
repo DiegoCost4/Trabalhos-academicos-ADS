@@ -13,9 +13,11 @@ void MenuPrincipal(){
 	printf("3) - Sair\n\n");
 
 	printf("Digite a opção desejada: ");
-	scanf("%i",&opcao);
+	//scanf("%i",&opcao);
 	
-	while(opcao!=4){
+	while(opcao!=1 || opcao!=2){
+
+		scanf("%i",&opcao);
 	
 	switch (opcao) 
 	{
@@ -28,10 +30,11 @@ void MenuPrincipal(){
 			TelaLogin(); // Tela de login
 			break;
 		case 3  :
-			system("exit");  // Validar Func�o (wrr: N�o est� funcionando)
+			printf("Vaza viado");
+			exit(0);  // Validar Func�o (wrr: N�o est� funcionando)
 			break;
 		default :
-			printf("Opção invalida!");
+			printf("Opção invalida!\n\n Digite uma opção válida: ");
 			break;	
 		}
 	}
