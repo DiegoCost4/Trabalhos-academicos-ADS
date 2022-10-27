@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "funcoes-storage.c"
+//#include "Storage-Screen.c"
+//#include "option-menu.c"
 
-
-void adicionar(){
+/*void adicionar(){
 	
 	char nameProduct[20];
 	int qntd;
-	char resposta;
+	 
 
 	
 	printf("Digite o produto: ");
@@ -28,28 +30,27 @@ void adicionar(){
 	fclose(storage);
 	
 
+	int resposta;
 
-	/*printf("Deseja adicionar outro produto no estoque?(s/n) \n");
+	printf("Deseja adicionar outro produto no estoque?\n 1-sim\n2-Não\n");
 
-	scanf("%s", resposta);
+	scanf("%i",&resposta);
 
 	switch (resposta)
 	{
-		case 's':
-			StorageScreen();		 
+		case 1:
+			//StorageScreen();		 
 			break;
-
-		case 'n':
-			MenuOpcoes();
+		case 2:
+			//MenuOpcoes();
 			break;
-
-	default:
-		printf("OpÃ§Ã£o invÃ¡lida\n\n");
-		break;*/
+	    default:
+			printf("Opção inválida\n\n");
+			break;
 	
+	}
 
-
-	/*if(resposta == 's' ){
+	if(resposta == 's' ){
 		StorageScreen();
 	}
 	else if(resposta == 'n'){
@@ -62,9 +63,9 @@ void adicionar(){
 		printf("Deseja adicionar outro produto no estoque?(s/n) \n");
 
 		scanf("%s", resposta);
-	}*/
+	}
 
-}
+}*/
 
 
 void StorageScreen(){
@@ -85,8 +86,13 @@ void StorageScreen(){
 		case 1:
 		 system("cls");
 		 adicionar();
-		 break;
+		 	break;
 
+		case 2:
+			break;
+
+		case 3:
+			break;	
 		 
 		 
 		default:
@@ -95,10 +101,5 @@ void StorageScreen(){
 		 
 	}
 	
-	
-	
-	
-	
-	
-	
+		
 }
