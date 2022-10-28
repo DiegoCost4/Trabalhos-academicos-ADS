@@ -3,6 +3,7 @@
 #include "client-registration.c"
 #include "product-registration.c"
 #include "product-list.c"
+#include "Storage-Screen.c"
 //Incluir as demais telas confome for desenvolvendo
 
 void MenuOpcoes(){
@@ -18,7 +19,7 @@ void MenuOpcoes(){
 	printf("3 - Listar Cliente\n"); // Vamos fazer juntos
 	printf("4 - Listar Produtos\n"); // Kaique
 	printf("5 - Vender\n"); 
-	//printf("6 - Comprar\n"); 
+	printf("6 - Estoque\n"); 
 	printf("7 - Sair\n");
 	printf("Digite a opção desejada: ");
 	scanf("%d", &opcao);
@@ -46,9 +47,9 @@ void MenuOpcoes(){
 			system("cls");
 			//sellProduct(); //Vender Produtos
 			break;
-	/*	case 6 :
+		case 6 :
 			system("cls");
-			//purchasePrduct(); // Comprar Produto*/
+			StorageScreen(); // Estoque
 		case 7 :
 			system("exit");
 			break;
