@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "login-screen.c"
 #include "file-database.c"
+
 void MenuPrincipal(){
 	int opcao = 0;
 	printf("*****************************************\n");
@@ -13,7 +14,6 @@ void MenuPrincipal(){
 	printf("3) - Sair\n\n");
 
 	printf("Digite a opção desejada: ");
-	//scanf("%i",&opcao);
 	
 	while(opcao!=1 || opcao!=2){
 
@@ -31,7 +31,7 @@ void MenuPrincipal(){
 			break;
 		case 3  :
 			printf("Vaza viado");
-			exit(0);  // Validar Func�o (wrr: N�o est� funcionando)
+			exit(0);  // Encerra programa
 			break;
 		default :
 			printf("Opção invalida!\n\n Digite uma opção válida: ");

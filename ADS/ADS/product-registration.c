@@ -35,7 +35,7 @@ void CdProdut(){
 	printf("Categoria: ");
 	scanf("%s",category);
 	
-	//Fazer Retorno para Menu de Op��es ou novo cadastro
+	//Fazer Retorno para Menu de Opções ou novo cadastro
 	
 	//AtribuirEspaco(nameProduct);
 	

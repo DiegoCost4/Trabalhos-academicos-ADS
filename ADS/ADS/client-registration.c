@@ -19,10 +19,10 @@ void CadastrosClient(){
 	printf("\nDigite os dados do cliente!\n\n");
 	
 	printf("Nome: ");			
-	scanf("%s", nameClient);	// Nome do Cliente, Ver como obter nome completo usando espa�o (fun��o espacoFunction.c)
+	scanf("%s", nameClient);	// Nome do Cliente, Ver como obter nome completo usando espaço (função espacoFunction.c)
 	
 	printf("Sobrenome: ");
-	scanf("%s",lastName);   // Sobrenome (provisorio enqunato n�o sabemos como obter o nome completo na fun��o anterior
+	scanf("%s",lastName);   // Sobrenome (provisorio enqunato não sabemos como obter o nome completo na função anterior
 		
 	printf("Telefone: ");
 	scanf("%s",NumberClient); // Numero do cliente
@@ -55,7 +55,7 @@ void CadastrosClient(){
 			break;
 		case 3:
 				printf("Obrigado por usar essa merda!");
-			exit(0);// Validar Fun��o
+			exit(0); // Encerra o programa
 		default :
 			printf("\nOpção Invalida!!");
 			break;
@@ -67,7 +67,6 @@ void CadastrosClient(){
 	arqClientDatabase = fopen("clientesDatabse.txt","a+");
 	
 	fprintf(arqClientDatabase,"%s %s %s %s %f\n", nameClient,lastName,NumberClient,email,cpf);
-	//fprintf(arqClientDatabase,"%d \n", NumberClient);
 	
 	fclose(arqClientDatabase);
 	
