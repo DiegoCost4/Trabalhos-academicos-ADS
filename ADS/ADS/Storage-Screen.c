@@ -84,11 +84,13 @@ void StorageScreen(){
 	switch(opcao){
 		
 		case 1:
-		 system("cls");
-		 adicionar();
+		 	system("cls");
+		 	adicionar();
 		 	break;
 
 		case 2:
+			system("cls");
+			excluir();
 			break;
 
 		case 3:

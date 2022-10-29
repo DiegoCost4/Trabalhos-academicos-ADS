@@ -1,8 +1,5 @@
-Shampoo 10
-melao 40
-Abacate 55
-caixa 80
-Pao 16
-melancia 45
-beterraba 4
-bolacha 34
+pao 23
+arroz 35
+banana 67
+agriao 4
+frango 45

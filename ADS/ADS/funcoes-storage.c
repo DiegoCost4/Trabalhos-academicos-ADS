@@ -4,12 +4,13 @@
 //#include "storage-screen.c"
 //#include "option-menu.c"
 
+char nameProduct[20];
+int qntd;
+FILE *storage;
+int resposta;
 
 void adicionar(){
 	
-	char nameProduct[20];
-	int qntd;
-	 
 
 	
 	printf("Digite o produto: ");
@@ -22,7 +23,7 @@ void adicionar(){
 	
 	
 	
-	FILE *storage;
+	
 	
 	storage = fopen("Storage.txt", "a+");
 	
@@ -34,7 +35,6 @@ void adicionar(){
 	system("cls");
 	
 
-	int resposta;
 
 	printf("Deseja adicionar outro produto no estoque?\n1-sim\n2-Não\n");
 
@@ -44,7 +44,7 @@ void adicionar(){
 
 		case 1:
 			system("cls");
-			StorageScreen();
+			adicionar();
 			break;
 		case 2:
 			MenuOpcoes();
@@ -53,3 +53,49 @@ void adicionar(){
 
 }
 
+void excluir(){
+
+	char delete[100];
+
+	printf("Digite o produto que deseja excluir: \n");
+	scanf("%s", delete);
+
+	storage = fopen("Storage.txt", "r");
+	FILE *arqNovo = fopen("notas_novo.txt","w"); // abrir arquivo em modo escrita)
+
+
+	while(!feof(storage)){
+
+		fscanf(storage, "%s %i\n", nameProduct, &qntd );
+		if(strcmp(nameProduct, delete) != 0){
+
+			fprintf(arqNovo, "%s %i\n", nameProduct, qntd);
+		}
+
+	}
+
+	fclose(storage);
+	fclose(arqNovo);
+
+	system("del Storage.txt");
+	system("rename notas_novo.txt Storage.txt");
+
+	printf("Fim da exclusão!\n");
+
+	printf("Deseja excluir outro produto?\n1-sim\n2-Não\n");
+
+	scanf("%i",&resposta);
+
+	switch(resposta){
+
+		case 1:
+			system("cls");
+			excluir();
+			break;
+		case 2:
+			MenuOpcoes();
+
+	}
+
+
+}
