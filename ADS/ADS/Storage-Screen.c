@@ -70,7 +70,7 @@
 
 void StorageScreen(){
 	
-	
+	printf("teste branch")
 	
 	int opcao = 0;
 	
@@ -79,6 +79,7 @@ void StorageScreen(){
 	printf("3- Editar\n");
 	
 	scanf("%i", &opcao);
+
 
 
 	switch(opcao){
