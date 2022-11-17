@@ -1,5 +1,5 @@
 pao 23
 arroz 35
-banana 67
 agriao 4
 frango 45
+cafe 50

@@ -99,3 +99,14 @@ void excluir(){
 
 
 }
+
+/*void listar(){
+
+
+	if(!arquivo_existe("Storage.txt"))
+		return;
+		
+	printf("\n\nListagem de produtos\n\n");	
+
+
+}*/

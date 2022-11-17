@@ -70,7 +70,9 @@
 
 void StorageScreen(){
 	
-	printf("teste branch")
+	printf("**************************************\n");
+	printf("***************ESTOQUE****************\n");
+	printf("**************************************\n\n");
 	
 	int opcao = 0;
 	
