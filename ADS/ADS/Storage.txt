@@ -1,5 +1,6 @@
 pao 23
 arroz 35
-agriao 4
 frango 45
 cafe 50
+garrafa 4576
+notebook 456

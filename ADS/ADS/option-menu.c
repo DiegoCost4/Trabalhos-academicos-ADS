@@ -15,11 +15,11 @@ void MenuOpcoes(){
 	printf("************Menu de Opções************\n");
 	printf("**************************************\n\n");	
 	printf("1 - Cadastrar Cliente\n"); // Carlos 
-	printf("2 - Cadastrar Produto\n"); // Guilherme
+	printf("2 - Cadastrar Produto\n"); // Guilherme     // verificsr de excluir essa linh(tela storage ja faz isso)
 	printf("3 - Listar Cliente\n"); // Vamos fazer juntos
 	printf("4 - Listar Produtos\n"); // Kaique
-	printf("5 - Vender\n"); 
-	printf("6 - Estoque\n"); 
+	printf("5 - Vender\n"); // ver de excluir essa opção
+	printf("6 - Estoque\n"); //Alexandre
 	printf("7 - Sair\n");
 	printf("Digite a opção desejada: ");
 	scanf("%d", &opcao);

@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-//#include "espacoFunction.c"
-//Tentando arrumar a cagada do Alexandre
+
 
 void CadastrosClient(){
 	

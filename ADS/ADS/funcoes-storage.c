@@ -1,17 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
-//#include "storage-screen.c"
-//#include "option-menu.c"
 
 char nameProduct[20];
 int qntd;
 FILE *storage;
 int resposta;
 
+
+int arquivo_existe(char nmarq[]) {
+	FILE* arq = fopen(nmarq, "r");
+    if (arq) {
+        fclose(arq);
+        return 1;
+    }
+    return 0;
+}
+
+
 void adicionar(){
 	
-
+	printf("**************************************\n");
+	printf("***************ESTOQUE****************\n");
+	printf("**************************************\n\n");
 	
 	printf("Digite o produto: ");
 	
@@ -23,8 +34,6 @@ void adicionar(){
 	
 	
 	
-	
-	
 	storage = fopen("Storage.txt", "a+");
 	
 	fprintf(storage, "%s %i\n" , nameProduct, qntd);
@@ -33,8 +42,6 @@ void adicionar(){
 
 
 	system("cls");
-	
-
 
 	printf("Deseja adicionar outro produto no estoque?\n1-sim\n2-Não\n");
 
@@ -53,7 +60,14 @@ void adicionar(){
 
 }
 
+
+
 void excluir(){
+
+	printf("**************************************\n");
+	printf("***************ESTOQUE****************\n");
+	printf("**************************************\n\n");
+
 
 	char delete[100];
 
@@ -80,7 +94,7 @@ void excluir(){
 	system("del Storage.txt");
 	system("rename notas_novo.txt Storage.txt");
 
-	printf("Fim da exclusão!\n");
+	printf("Fim da exclusão!\n\n");
 
 	printf("Deseja excluir outro produto?\n1-sim\n2-Não\n");
 
@@ -97,16 +111,75 @@ void excluir(){
 
 	}
 
-
 }
 
-/*void listar(){
+
+
+void listar(){
+
+	printf("**************************************\n");
+	printf("***************ESTOQUE****************\n");
+	printf("**************************************\n\n");
 
 
 	if(!arquivo_existe("Storage.txt"))
 		return;
+
+	printf("\n\nListagem de Produtos\n\n");
+
+	storage = fopen("Storage.txt", "r");
+
+	while(!feof(storage)){
+
+		fscanf(storage, "%s %i\n", nameProduct, &qntd);
+		printf("|   % *i   |  %s     \n", 6, qntd, nameProduct); 
+	}
+
+	fclose(storage);
+
+	printf("Fim da Listagem\n\n");
+
+
+	printf("1- Estoque\n");
+	printf("2- Menu Principal\n");
+	printf("Digite a opção desejada: ");
+
+	scanf("%i",&resposta);
+
+	switch(resposta){
+
+		case 1:
+			system("cls");
+			StorageScreen();
+			break;
+		case 2:
+			MenuOpcoes();
+
+	}	
+
+}
+
+
+
+
+
+
+/*void listar(){
+
+	if(!arquivo_existe("Storage.txt"))
+		return;
 		
-	printf("\n\nListagem de produtos\n\n");	
+	printf("\n\nListagem de produtos\n\n");
 
+	storage = fopen("Storage.txt", "r");
 
+	while(!feof(storage)){
+
+		fscanf(storage, "%s %i\n", nameProduct, qntd);
+		printf("|  %i  |  %s    \n", qntd, nameProduct);	
+	}
+
+	fclose(storage);
+
+	printf("Fim da listagem\n");
 }*/
