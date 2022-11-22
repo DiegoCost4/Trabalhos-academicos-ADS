@@ -9,7 +9,6 @@ void CadastrosClient(){
 	char lastName[50];
 	char NumberClient[11];
 	char email[30];
-	float cpf;
 
 	int opcao = 0;
 
@@ -23,16 +22,23 @@ void CadastrosClient(){
 	scanf("%s", nameClient);	// Nome do Cliente, Ver como obter nome completo usando espa�o (fun��o espacoFunction.c)
 	
 	printf("Sobrenome: ");
-	scanf("%s",lastName);   // Sobrenome (provisorio enqunato n�o sabemos como obter o nome completo na fun��o anterior
+	scanf("%s", lastName);   // Sobrenome (provisorio enqunato n�o sabemos como obter o nome completo na fun��o anterior
 		
 	printf("Telefone: ");
-	scanf("%s",NumberClient); // Numero do cliente
+	scanf("%s", NumberClient); // Numero do cliente
 	
 	printf("Digite o seu e-mail: "); // E-mail do Cliente
 	scanf("%s", email);
 	
-	printf("Digite o CPF: ");
-	scanf("%f",& cpf); // Cpf ( Fazer fun��o de valida��o)
+
+	//Banco de dados
+	FILE *arqClientDatabase;
+	arqClientDatabase = fopen("clientesDatabse.txt","a+");
+	
+	fprintf(arqClientDatabase,"%s  %s  %s  %s \n", nameClient,lastName,NumberClient,email);
+	//fprintf(arqClientDatabase,"%d \n", NumberClient);
+	
+	fclose(arqClientDatabase);
 	
 	printf("Cadastro efetuado!\n\n");
 	
@@ -58,14 +64,7 @@ void CadastrosClient(){
 			break;
 	}
 	
-	//Banco de dados
-	FILE *arqClientDatabase;
-	arqClientDatabase = fopen("clientesDatabse.txt","a+");
 	
-	fprintf(arqClientDatabase,"%s %s %s %s %f\n", nameClient,lastName,NumberClient,email,cpf);
-	//fprintf(arqClientDatabase,"%d \n", NumberClient);
-	
-	fclose(arqClientDatabase);
 	
 
 	

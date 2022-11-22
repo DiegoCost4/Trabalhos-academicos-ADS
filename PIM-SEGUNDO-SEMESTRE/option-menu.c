@@ -4,6 +4,7 @@
 #include "product-registration.c"
 #include "product-list.c"
 #include "Storage-Screen.c"
+#include "listarCliente.c"
 //Incluir as demais telas confome for desenvolvendo
 
 void MenuOpcoes(){
@@ -15,16 +16,18 @@ void MenuOpcoes(){
 	printf("************Menu de Opções************\n");
 	printf("**************************************\n\n");	
 	printf("1 - Cadastrar Cliente\n"); // Carlos 
-	printf("2 - Cadastrar Produto\n"); // Guilherme     // verificsr de excluir essa linh(tela storage ja faz isso)
+	printf("2 - Cadastrar Produto\n"); // verificsr de excluir essa linh(tela storage ja faz isso)
 	printf("3 - Listar Cliente\n"); // Vamos fazer juntos
 	printf("4 - Listar Produtos\n"); // Kaique
-	printf("5 - Vender\n"); // ver de excluir essa opção
-	printf("6 - Estoque\n"); //Alexandre
-	printf("7 - Sair\n");
+	printf("5 - Estoque\n"); //Alexandre
+	printf("6 - Sair\n");
 	printf("Digite a opção desejada: ");
+	
+	
+	while(opcao != 1 || opcao != 2 || opcao != 3 || opcao != 4 || opcao != 5 || opcao != 6){
+
 	scanf("%d", &opcao);
-	
-	
+
 	switch (opcao) 
 	{
 		case 1 :
@@ -37,7 +40,7 @@ void MenuOpcoes(){
 			break;
 		case 3 :
 			system("cls");
-			//lsClient(); //Lista Clientes
+			lsClient();
 			break;
 		case 4 :
 			system("cls");
@@ -45,17 +48,24 @@ void MenuOpcoes(){
 			break;
 		case 5 :
 			system("cls");
-			//sellProduct(); //Vender Produtos
-			break;
-		case 6 :
-			system("cls");
 			StorageScreen(); // Estoque
-		case 7 :
-			system("exit");
+		case 6 :
+			exit(0);
 			break;
 		default :
-			printf("\nOpção invalida!\n");
+			system("cls");
+			printf("\nOpção invalida!\n\n");
+			printf("1 - Cadastrar Cliente\n"); 
+			printf("2 - Cadastrar Produto\n"); 
+			printf("3 - Listar Cliente\n"); 
+			printf("4 - Listar Produtos\n"); 
+			printf("5 - Estoque\n"); 
+			printf("6 - Sair\n\n");
+			printf("Digite uma opção válida: ");
+
 			break;
 	}
+	}
+
 	system("pause");
 }

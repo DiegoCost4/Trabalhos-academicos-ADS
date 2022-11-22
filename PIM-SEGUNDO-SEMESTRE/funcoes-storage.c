@@ -118,7 +118,7 @@ void excluir(){
 void listar(){
 
 	printf("**************************************\n");
-	printf("***************ESTOQUE****************\n");
+	printf("***************Estoque****************\n");
 	printf("**************************************\n\n");
 
 
@@ -132,7 +132,7 @@ void listar(){
 	while(!feof(storage)){
 
 		fscanf(storage, "%s %i\n", nameProduct, &qntd);
-		printf("|   % *i   |  %s     \n", 6, qntd, nameProduct); 
+		printf("|   %-8i   |  %-8s     \n", qntd, nameProduct); 
 	}
 
 	fclose(storage);

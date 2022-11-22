@@ -13,13 +13,13 @@ void lsProduct(){
 	
 	arquivo = fopen("DataBaseProducts.txt", "r");  //abertura do DB de produtos
 	
-	printf("Nome do Produto  |   Marca  |  QTD   |  Preço de Custo  |   Preço de Venda  |   Categoria \n");
+	printf("Nome do Produto  |      Marca      |       QTD       |Preço de Compra | Preço de Venda | Categoria \n");
 	
 	while(!feof(arquivo)){
 		
 		fscanf(arquivo, "%s %s %i %f %f %s \n", nameProduct, brand, &qntd, &costPrice, &salePrice, category); //acesso aos dados
 		
-		printf("%s  | %s | %i | %.2f | %.2f | %s\n", nameProduct, brand, qntd, costPrice, salePrice, category); //exibi��o na tela
+		printf("%-15s  | %-15s | %-15i | %-15.2f | %-15.2f | %-15s\n", nameProduct, brand, qntd, costPrice, salePrice, category); //exibição na tela
 	}
 	
 	
@@ -29,12 +29,17 @@ void lsProduct(){
 	printf("\nFim da listagem. Pressione ENTER para retornar ao Menu Principal. \n \n");
 	char ch;
 	
-	getchar();
-	ch = fgetc(stdin);
 	
-	if(ch == 0x0A){
+	
+	while(ch != 0x0A){
+		getchar();
+		ch = fgetc(stdin);
+		if(ch == 0x0A){
 		
 		MenuOpcoes();
 	}
-	
+	else{
+		printf("Opção inválida. Pressione ENTER para retornar ao Menu Principal. \n \n");
+	}
+	}
 }
