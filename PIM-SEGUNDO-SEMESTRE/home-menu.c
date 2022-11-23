@@ -28,7 +28,7 @@ void MenuPrincipal(){
 			TelaLogin(); // Tela de login
 			break;
 		case 3  :
-			system("exit");  // Validar Func�o (wrr: N�o est� funcionando)
+			system("exit"); 
 			break;
 		default :
 			printf("Opção invalida!");

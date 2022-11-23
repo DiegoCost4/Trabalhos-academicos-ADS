@@ -1,7 +1,5 @@
 #include <string.h>
 #include <conio.h>
-//#include "file-database.c"
-//#include "login-screen.c"
 
 void getSenha(char *senha, char caractere)
 {

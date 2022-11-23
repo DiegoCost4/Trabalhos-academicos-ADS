@@ -16,7 +16,7 @@ void MenuOpcoes(){
 	printf("************Menu de Opções************\n");
 	printf("**************************************\n\n");	
 	printf("1 - Cadastrar Cliente\n"); // Carlos 
-	printf("2 - Cadastrar Produto\n"); // verificsr de excluir essa linh(tela storage ja faz isso)
+	printf("2 - Cadastrar Produto\n");
 	printf("3 - Listar Cliente\n"); // Vamos fazer juntos
 	printf("4 - Listar Produtos\n"); // Kaique
 	printf("5 - Estoque\n"); //Alexandre
@@ -39,7 +39,7 @@ void MenuOpcoes(){
 			CdProdut(); // Cadastra Produtos
 			break;
 		case 3 :
-			system("cls");
+			system("cls");//listar clientes cadastrados
 			lsClient();
 			break;
 		case 4 :
@@ -50,7 +50,7 @@ void MenuOpcoes(){
 			system("cls");
 			StorageScreen(); // Estoque
 		case 6 :
-			exit(0);
+			exit(0); //fechar o programa
 			break;
 		default :
 			system("cls");

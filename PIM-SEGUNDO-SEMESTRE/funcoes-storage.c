@@ -158,28 +158,3 @@ void listar(){
 	}	
 
 }
-
-
-
-
-
-
-/*void listar(){
-
-	if(!arquivo_existe("Storage.txt"))
-		return;
-		
-	printf("\n\nListagem de produtos\n\n");
-
-	storage = fopen("Storage.txt", "r");
-
-	while(!feof(storage)){
-
-		fscanf(storage, "%s %i\n", nameProduct, qntd);
-		printf("|  %i  |  %s    \n", qntd, nameProduct);	
-	}
-
-	fclose(storage);
-
-	printf("Fim da listagem\n");
-}*/
