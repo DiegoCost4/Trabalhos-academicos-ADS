@@ -41,9 +41,8 @@ void adicionar(){
 	fclose(storage);
 
 
-	system("cls");
 
-	printf("Deseja adicionar outro produto no estoque?\n1-sim\n2-N√£o\n");
+	printf("\nDeseja adicionar outro produto no estoque?\n1-sim\n2-N„o\n");
 
 	scanf("%i",&resposta);
 
@@ -54,7 +53,8 @@ void adicionar(){
 			adicionar();
 			break;
 		case 2:
-			MenuOpcoes();
+			system("cls");
+			StorageScreen();
 
 	}
 
@@ -94,9 +94,9 @@ void excluir(){
 	system("del Storage.txt");
 	system("rename notas_novo.txt Storage.txt");
 
-	printf("Fim da exclus√£o!\n\n");
+	printf("Fim da exclus„o!\n\n");
 
-	printf("Deseja excluir outro produto?\n1-sim\n2-N√£o\n");
+	printf("Deseja excluir outro produto?\n1-sim\n2-N„o\n");
 
 	scanf("%i",&resposta);
 
@@ -107,7 +107,8 @@ void excluir(){
 			excluir();
 			break;
 		case 2:
-			MenuOpcoes();
+			system("cls");
+			StorageScreen();
 
 	}
 
@@ -142,7 +143,7 @@ void listar(){
 
 	printf("1- Estoque\n");
 	printf("2- Menu Principal\n");
-	printf("Digite a op√ß√£o desejada: ");
+	printf("Digite a opÁ„o desejada: ");
 
 	scanf("%i",&resposta);
 

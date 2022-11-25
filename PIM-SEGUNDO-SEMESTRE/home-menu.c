@@ -12,7 +12,7 @@ void MenuPrincipal(){
 	printf("2) - Conecte-se\n");
 	printf("3) - Sair\n\n");
 
-	printf("Digite a opÃ§Ã£o desejada: ");
+	printf("Digite a opção desejada: ");
 	scanf("%i",&opcao);
 	
 	while(opcao!=4){
@@ -31,7 +31,7 @@ void MenuPrincipal(){
 			system("exit"); 
 			break;
 		default :
-			printf("OpÃ§Ã£o invalida!");
+			printf("Opção inválida!");
 			break;	
 		}
 	}

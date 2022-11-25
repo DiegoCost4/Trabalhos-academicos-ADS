@@ -10,9 +10,9 @@ void lsClient(){
 	
 	printf("\n\nListagem de Produtos\n\n");
 	
-	cliente = fopen("clientesDatabse.txt", "r");  //abertura do DB de produtos
+	cliente = fopen("clientesDatabase.txt", "r");  //abertura do DB de produtos
 	
-	printf("     Nome      |    Sobrenome   |    Telefone   |   email  \n");
+	printf("      Nome       |    Sobrenome    |     Telefone    |   email  \n");
 	
 	while(!feof(cliente)){
 		
@@ -37,7 +37,7 @@ void lsClient(){
 		MenuOpcoes();
 	}
 	else{
-		printf("Op√ß√£o inv√°lida. Pressione ENTER para retornar ao Menu Principal. \n \n");
+		printf("OpÁ„o inv·lida. Pressione ENTER para retornar ao Menu Principal. \n \n");
 	}
 	}
 }

@@ -4,3 +4,5 @@ cafe 50
 garrafa 4576
 notebook 456
 GPU 10
+pc 234
+cartao 4356

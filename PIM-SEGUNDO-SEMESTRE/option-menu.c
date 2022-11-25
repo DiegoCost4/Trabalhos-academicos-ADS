@@ -13,7 +13,7 @@ void MenuOpcoes(){
 	int opcao = 0;
 	
 	printf("**************************************\n");
-	printf("************Menu de Opções************\n");
+	printf("************Menu de Op��es************\n");
 	printf("**************************************\n\n");	
 	printf("1 - Cadastrar Cliente\n"); // Carlos 
 	printf("2 - Cadastrar Produto\n");
@@ -21,7 +21,7 @@ void MenuOpcoes(){
 	printf("4 - Listar Produtos\n"); // Kaique
 	printf("5 - Estoque\n"); //Alexandre
 	printf("6 - Sair\n");
-	printf("Digite a opção desejada: ");
+	printf("Digite a op��o desejada: ");
 	
 	
 	while(opcao != 1 || opcao != 2 || opcao != 3 || opcao != 4 || opcao != 5 || opcao != 6){
@@ -54,14 +54,14 @@ void MenuOpcoes(){
 			break;
 		default :
 			system("cls");
-			printf("\nOpção invalida!\n\n");
+			printf("\nOp??o inv?lida!\n\n");
 			printf("1 - Cadastrar Cliente\n"); 
 			printf("2 - Cadastrar Produto\n"); 
 			printf("3 - Listar Cliente\n"); 
 			printf("4 - Listar Produtos\n"); 
 			printf("5 - Estoque\n"); 
 			printf("6 - Sair\n\n");
-			printf("Digite uma opção válida: ");
+			printf("Digite uma op??o v?lida: ");
 
 			break;
 	}

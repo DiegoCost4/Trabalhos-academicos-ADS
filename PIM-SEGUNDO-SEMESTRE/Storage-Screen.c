@@ -39,8 +39,8 @@ void StorageScreen()
 
 		default:
 			system("cls");
-			printf("\nOpcao invalida!\n");
-			printf("Digite uma opÃ§Ã£o vÃ¡lida!!!\n\n");
+			printf("\nOpção inválida!\n");
+			printf("Digite uma opção valida!!!\n\n");
 			printf("1- Adicionar\n");
 			printf("2- Excluir\n");
 			printf("3- Listagem\n");

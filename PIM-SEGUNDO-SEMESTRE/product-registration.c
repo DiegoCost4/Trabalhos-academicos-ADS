@@ -24,10 +24,10 @@ void CdProdut(){
 	printf("Quantidade: ");
 	scanf("%i",&qntd);
 	
-	printf("PreÃ§o de compra: ");
+	printf("Preço de compra: ");
 	scanf("%f",&costPrice);
 	
-	printf("PreÃ§o de venda: ");
+	printf("Preço de venda: ");
 	scanf("%f",&salePrice);
 	
 	printf("Categoria: ");
@@ -49,6 +49,26 @@ void CdProdut(){
 
 	fclose(storage);
 
+
+	printf("Produto adicionado!!\n\n");
+
+
+	printf("\nFim da listagem. Pressione ENTER para retornar ao Menu Principal. \n \n");
+	char ch;
+	
+	
+	
+	while(ch != 0x0A){
+		getchar();
+		ch = fgetc(stdin);
+		if(ch == 0x0A){
+		
+		MenuOpcoes();
+	}
+	else{
+		printf("Opção inválida. Pressione ENTER para retornar ao Menu Principal. \n \n");
+	}
+	}
 
 
 }

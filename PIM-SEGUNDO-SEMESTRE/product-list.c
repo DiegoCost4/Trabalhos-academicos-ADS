@@ -13,13 +13,13 @@ void lsProduct(){
 	
 	arquivo = fopen("DataBaseProducts.txt", "r");  //abertura do DB de produtos
 	
-	printf("Nome do Produto  |      Marca      |       QTD       |Pre√ßo de Compra | Pre√ßo de Venda | Categoria \n");
+	printf("Nome do Produto  |      Marca      |       QTD       |Pre?o de Compra | Pre? de Venda | Categoria \n");
 	
 	while(!feof(arquivo)){
 		
 		fscanf(arquivo, "%s %s %i %f %f %s \n", nameProduct, brand, &qntd, &costPrice, &salePrice, category); //acesso aos dados
 		
-		printf("%-15s  | %-15s | %-15i | %-15.2f | %-15.2f | %-15s\n", nameProduct, brand, qntd, costPrice, salePrice, category); //exibi√ß√£o na tela
+		printf("%-15s  | %-15s | %-15i | %-15.2f | %-15.2f | %-15s\n", nameProduct, brand, qntd, costPrice, salePrice, category); //exibiÁ„o na tela
 	}
 	
 	
@@ -39,7 +39,7 @@ void lsProduct(){
 		MenuOpcoes();
 	}
 	else{
-		printf("Op√ß√£o inv√°lida. Pressione ENTER para retornar ao Menu Principal. \n \n");
+		printf("OpÁ„o inv·lida. Pressione ENTER para retornar ao Menu Principal. \n \n");
 	}
 	}
 }

@@ -30,7 +30,7 @@ void TelaLogin()
 
     while ((fscanf(arq, "%s %s", login, senha)) != EOF)
     {
-        ; // Loop para leitura de todo conteudo do txt para comparaï¿½ï¿½o
+        ; // Loop para leitura de todo conteudo do txt para compara??o
 
         if (strcmp(login, login1) == 0 && strcmp(senha, senha1) == 0)
         {
@@ -43,5 +43,5 @@ void TelaLogin()
         }
     }
 
-    printf("\n\nDADOS INVALIDOS!\n\n");
+    printf("\n\nDADOS INVÁLIDOS!\n\n");
 }

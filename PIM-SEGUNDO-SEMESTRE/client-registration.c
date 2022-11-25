@@ -1,74 +1,3 @@
-/*#include <stdio.h>
-#include <stdlib.h>
-
-void CadastrosClient()
-{
-
-	char nameClient[100];
-	char sobrenome[100];
-	char telefone[11];
-	char email[30];
-
-	int opcao = 0;
-
-	printf("****************************************\n");
-	printf("***********Cadastro de Clientes*********\n");
-	printf("****************************************\n\n");
-
-	printf("\nDigite os dados do cliente!\n\n");
-
-	printf("Nome: ");
-	scanf("%s", nameClient); // Nome do Cliente, Ver como obter nome completo usando espaï¿½o (funï¿½ï¿½o espacoFunction.c)
-
-	printf("Sobrenome: ");
-	scanf("%s", sobrenome); // Sobrenome (provisorio enqunato nï¿½o sabemos como obter o nome completo na funï¿½ï¿½o anterior
-
-	printf("Telefone: ");
-	scanf("%s", telefone); // Numero do cliente
-
-	printf("Digite o seu e-mail: "); // E-mail do Cliente
-	scanf("%s", email);
-
-	// Banco de dados
-	FILE *arqClientDatabase;
-	arqClientDatabase = fopen("clientesDatabase.txt", "a+");
-
-	fprintf(arqClientDatabase, "%s  %s  %s  %s \n", nameClient, sobrenome, telefone, email);
-	// fprintf(arqClientDatabase,"%d \n", telefone);
-
-	fclose(arqClientDatabase);
-
-	printf("Cadastro efetuado!\n\n");
-
-	printf("Selecione a opÃ§Ã£o que deseja: \n");
-	printf("1 - Cadastrar novo cliente\n");
-	printf("2 - Retornar ao Menu de opÃ§Ãµes\n");
-	printf("3 - Sair\n");
-
-	while (opcao != 1 || opcao != 2 || opcao != 3)
-	{
-
-		scanf("%i", &opcao);
-
-		switch (opcao)
-		{
-		case 1:
-			system("cls");
-			CadastrosClient(); // Funcionando
-			break;
-		case 2:
-			system("cls");
-			MenuOpcoes(); // Funcionando
-			break;
-		case 3:
-			exit(0); // Validar Funï¿½ï¿½o
-		default:
-			printf("\nOpÃ§Ã£o Invalida!!");
-			break;
-		}
-	}
-}*/
-
 #include <stdio.h>
 #include <stdlib.h>
 //#include "espacoFunction.c"
@@ -91,10 +20,10 @@ void CadastrosClient()
 	printf("\nDigite os dados do cliente!\n\n");
 
 	printf("Nome: ");
-	scanf("%s", nameClient); // Nome do Cliente, Ver como obter nome completo usando espaï¿½o (funï¿½ï¿½o espacoFunction.c)
+	scanf("%s", nameClient); // Nome do Cliente, Ver como obter nome completo usando espa?o (fun??o espacoFunction.c)
 
 	printf("Sobrenome: ");
-	scanf("%s", lastName); // Sobrenome (provisorio enqunato nï¿½o sabemos como obter o nome completo na funï¿½ï¿½o anterior
+	scanf("%s", lastName); // Sobrenome (provisorio enqunato n?o sabemos como obter o nome completo na fun??o anterior
 
 	printf("Telefone: ");
 	scanf("%s", NumberClient); // Numero do cliente
@@ -115,9 +44,9 @@ void CadastrosClient()
 
 	printf("Cadastro efetuado!\n\n");
 
-	printf("Selecione a opÃ§Ã£o que deseja: \n");
+	printf("Selecione a opções que deseja: \n");
 	printf("1 - Cadastrar novo cliente\n");
-	printf("2 - Retornar ao Menu de opÃ§Ãµes\n");
+	printf("2 - Retornar ao Menu de opções\n");
 	printf("3 - Sair\n");
 
 	while (opcao != 1 || opcao != 2 || opcao != 3)
@@ -135,14 +64,14 @@ void CadastrosClient()
 			MenuOpcoes(); // Funcionando
 			break;
 		case 3:
-			exit(0); // Validar Funï¿½ï¿½o
+			exit(0); // Validar Função
 		default:
 			system("cls");
-			printf("\nOpÃ§Ã£o Invalida!!\n \n");
+			printf("\nOpção Inválida!!\n \n");
 			printf("1 - Cadastrar novo cliente\n");
-			printf("2 - Retornar ao Menu de opÃ§Ãµes\n");
+			printf("2 - Retornar ao Menu de opções\n");
 			printf("3 - Sair\n");
-			printf("Digite uma opÃ§Ã£o valida: ");
+			printf("Digite uma opção válida: ");
 			break;
 		}
 	}
