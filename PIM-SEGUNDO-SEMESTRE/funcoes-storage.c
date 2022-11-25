@@ -75,7 +75,7 @@ void excluir(){
 	scanf("%s", delete);
 
 	storage = fopen("Storage.txt", "r");
-	FILE *arqNovo = fopen("notas_novo.txt","w"); // abrir arquivo em modo escrita)
+	FILE *arqNovo = fopen("notas_novo.txt","w");
 
 
 	while(!feof(storage)){
@@ -130,6 +130,8 @@ void listar(){
 
 	storage = fopen("Storage.txt", "r");
 
+	printf("|  Quantidade  |    Produto    \n");
+
 	while(!feof(storage)){
 
 		fscanf(storage, "%s %i\n", nameProduct, &qntd);
@@ -142,7 +144,7 @@ void listar(){
 
 
 	printf("1- Estoque\n");
-	printf("2- Menu Principal\n");
+	printf("2- Menu Principal\n\n");
 	printf("Digite a opção desejada: ");
 
 	scanf("%i",&resposta);

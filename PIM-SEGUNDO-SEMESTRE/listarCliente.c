@@ -8,7 +8,7 @@ void lsClient(){
 	char NumberClient[11];
 	char email[30];
 	
-	printf("\n\nListagem de Produtos\n\n");
+	printf("\n\nListagem de Clientes\n\n");
 	
 	cliente = fopen("clientesDatabase.txt", "r");  //abertura do DB de produtos
 	
@@ -18,7 +18,7 @@ void lsClient(){
 		
 		fscanf(cliente, "%s %s %s %s \n", nameClient, lastName, NumberClient, email); //acesso aos dados
 		
-		printf("%-15s  | %-15s | %-15s | %-15s |\n", nameClient, lastName, NumberClient, email); //exibição na tela
+		printf("%-15s  | %-15s | %-15s | %-15s \n", nameClient, lastName, NumberClient, email); 
 	}
 	
 	

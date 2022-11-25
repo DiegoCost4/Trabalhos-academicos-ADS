@@ -2,18 +2,20 @@
 #include <stdlib.h>
 
 void lsProduct(){
-	FILE* arquivo;
+	FILE *arquivo;
 	char nameProduct[100];
 	char brand[15];
 	char category[50];
-	int qntd, exit = 0;
+	int qntd;
 	float costPrice,salePrice;
+
 	
+
 	printf("\n\nListagem de Produtos\n\n");
 	
 	arquivo = fopen("DataBaseProducts.txt", "r");  //abertura do DB de produtos
 	
-	printf("Nome do Produto  |      Marca      |       QTD       |Pre?o de Compra | Pre? de Venda | Categoria \n");
+	printf("Nome do Produto  |      Marca      |       QTD       |Preço de Compra  |  Preço de Venda | Categoria \n");
 	
 	while(!feof(arquivo)){
 		
@@ -21,8 +23,6 @@ void lsProduct(){
 		
 		printf("%-15s  | %-15s | %-15i | %-15.2f | %-15.2f | %-15s\n", nameProduct, brand, qntd, costPrice, salePrice, category); //exibição na tela
 	}
-	
-	
 	
 	fclose(arquivo);
 	
@@ -42,4 +42,6 @@ void lsProduct(){
 		printf("Opção inválida. Pressione ENTER para retornar ao Menu Principal. \n \n");
 	}
 	}
+
+
 }

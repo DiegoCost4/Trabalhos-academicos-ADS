@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-//#include "espacoFunction.c"
 
 void CadastrosClient()
 {
@@ -20,15 +19,15 @@ void CadastrosClient()
 	printf("\nDigite os dados do cliente!\n\n");
 
 	printf("Nome: ");
-	scanf("%s", nameClient); // Nome do Cliente, Ver como obter nome completo usando espa?o (fun??o espacoFunction.c)
+	scanf("%s", nameClient); 
 
 	printf("Sobrenome: ");
-	scanf("%s", lastName); // Sobrenome (provisorio enqunato n?o sabemos como obter o nome completo na fun??o anterior
+	scanf("%s", lastName); 
 
 	printf("Telefone: ");
-	scanf("%s", NumberClient); // Numero do cliente
+	scanf("%s", NumberClient); 
 
-	printf("Digite o seu e-mail: "); // E-mail do Cliente
+	printf("Digite o seu e-mail: "); 
 	scanf("%s", email);
 
 
@@ -38,7 +37,6 @@ void CadastrosClient()
 	arqClientDatabase = fopen("clientesDatabase.txt", "a+");
 
 	fprintf(arqClientDatabase, "%s %s %s %s \n", nameClient, lastName, NumberClient, email);
-	// fprintf(arqClientDatabase,"%d \n", NumberClient);
 
 	fclose(arqClientDatabase);
 
@@ -57,14 +55,14 @@ void CadastrosClient()
 		{
 		case 1:
 			system("cls");
-			CadastrosClient(); // Funcionando
+			CadastrosClient(); 
 			break;
 		case 2:
 			system("cls");
-			MenuOpcoes(); // Funcionando
+			MenuOpcoes(); 
 			break;
 		case 3:
-			exit(0); // Validar Função
+			exit(0); 
 		default:
 			system("cls");
 			printf("\nOpção Inválida!!\n \n");

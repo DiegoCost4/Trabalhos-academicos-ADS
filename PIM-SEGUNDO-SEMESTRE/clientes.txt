@@ -1,9 +1,4 @@
 Diego 351
-User1 321
-User 852
-User3 258
-Test 123
-
 Carlos 351
 Kaique 321
 Alexandre 123

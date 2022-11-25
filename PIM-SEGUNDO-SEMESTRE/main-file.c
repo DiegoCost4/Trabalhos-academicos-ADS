@@ -8,13 +8,10 @@
 
 int main()
 {
-	// definition();
 	setlocale(LC_ALL, "");
 
-	MenuPrincipal(); // Cadastro/Login
-	MenuOpcoes();	 // Opções Para Nevegação
+	MenuPrincipal(); 
+	MenuOpcoes();	
 
-
-	printf("DEEEEU CEERTOOOOOOO");
 	return 0;
 }

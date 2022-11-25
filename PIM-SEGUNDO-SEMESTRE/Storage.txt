@@ -1,8 +1,8 @@
-pao 23
-arroz 35
-cafe 50
-garrafa 4576
-notebook 456
-GPU 10
-pc 234
-cartao 4356
+Converse   300
+
+AirMax   200
+
+superstar   150
+
+AirForce1   500
+

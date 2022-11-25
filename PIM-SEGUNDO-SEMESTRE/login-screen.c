@@ -22,15 +22,14 @@ void TelaLogin()
     printf("*******Tela de Login*******\n\n");
 
     printf("Digite o Login: ");
-    scanf("%s", login1); // Entrada de login do usuario
+    scanf("%s", login1); 
 
     printf("Digite a Senha: ");
-    getSenha(senha1, '*'); // entrada + Esconde a senha
-                           // scanf("%s", senha1);
+    getSenha(senha1, '*'); 
 
     while ((fscanf(arq, "%s %s", login, senha)) != EOF)
     {
-        ; // Loop para leitura de todo conteudo do txt para compara??o
+       
 
         if (strcmp(login, login1) == 0 && strcmp(senha, senha1) == 0)
         {

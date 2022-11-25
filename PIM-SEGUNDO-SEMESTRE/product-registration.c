@@ -37,7 +37,7 @@ void CdProdut(){
 	FILE *arqDataBaseProducts;
 	arqDataBaseProducts = fopen("DataBaseProducts.txt", "a+");
 	
-	fprintf(arqDataBaseProducts,"%s %s %i R$%.2f R$%.2f %s\n",nameProduct,brand,qntd,costPrice,salePrice,category);
+	fprintf(arqDataBaseProducts,"%s %s %i %.2f %.2f %s\n",nameProduct,brand,qntd,costPrice,salePrice,category);
 	
 	fclose(arqDataBaseProducts);
 

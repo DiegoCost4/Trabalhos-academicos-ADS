@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-//#include "getsenha.c"
 
 void CadastroUser(){
 
@@ -15,7 +14,6 @@ void CadastroUser(){
 	scanf("%s",login);
 	
 	printf("Cadastre sua senha: ");
-	//getSenha(senha, '*'); // entrada + Esconde a senha 
 	scanf("%s",senha);
 
 	
@@ -23,10 +21,9 @@ void CadastroUser(){
 	arq = fopen("clientes.txt","a+");
 	
 	fprintf(arq,"%s %s\n", login, senha);
-	//fprintf(arq,"%s\n", senha);
 	fclose(arq);
 	
-	TelaLogin(); // Depois de cadastrar retorna para tela de login
+	TelaLogin();
 	
 	
 }

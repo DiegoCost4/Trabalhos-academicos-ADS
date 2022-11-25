@@ -21,11 +21,11 @@ void MenuPrincipal(){
 	{
 		case 1 : 
 			system("cls");
-			CadastroUser(); // Cadastrar Usuario
+			CadastroUser(); 
 			break;
 		case 2 :
 			system("cls");
-			TelaLogin(); // Tela de login
+			TelaLogin();
 			break;
 		case 3  :
 			system("exit"); 
